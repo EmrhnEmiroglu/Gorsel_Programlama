@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             button7 = new Button();
             button6 = new Button();
             button5 = new Button();
             button1 = new Button();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            ZamanlamaCb = new ComboBox();
+            CinsiyetCb = new ComboBox();
             label7 = new Label();
             label6 = new Label();
-            textBox5 = new TextBox();
+            YasTb = new TextBox();
             label9 = new Label();
-            textBox3 = new TextBox();
+            OdemeTb = new TextBox();
             label8 = new Label();
-            textBox4 = new TextBox();
+            TelefonTb = new TextBox();
             label5 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            AdSoyadTb = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             label10 = new Label();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            UyeDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            ((System.ComponentModel.ISupportInitialize)UyeDGV).BeginInit();
             SuspendLayout();
             // 
             // button7
@@ -68,6 +68,7 @@
             button7.TabIndex = 39;
             button7.Text = "Reset";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -80,8 +81,9 @@
             button6.Name = "button6";
             button6.Size = new Size(121, 42);
             button6.TabIndex = 38;
-            button6.Text = "Geri";
+            button6.Text = "Sil";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
@@ -96,6 +98,7 @@
             button5.TabIndex = 37;
             button5.Text = "Geri";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button1
             // 
@@ -110,28 +113,29 @@
             button1.TabIndex = 36;
             button1.Text = "Güncelle";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // comboBox2
+            // ZamanlamaCb
             // 
-            comboBox2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            comboBox2.ForeColor = Color.Crimson;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "06.00-08.00", "08.00-10.00", "18.00-20.00", "20.00-22.00" });
-            comboBox2.Location = new Point(75, 446);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(200, 29);
-            comboBox2.TabIndex = 35;
+            ZamanlamaCb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            ZamanlamaCb.ForeColor = Color.Crimson;
+            ZamanlamaCb.FormattingEnabled = true;
+            ZamanlamaCb.Items.AddRange(new object[] { "06.00-08.00", "08.00-10.00", "18.00-20.00", "20.00-22.00" });
+            ZamanlamaCb.Location = new Point(75, 446);
+            ZamanlamaCb.Name = "ZamanlamaCb";
+            ZamanlamaCb.Size = new Size(200, 29);
+            ZamanlamaCb.TabIndex = 35;
             // 
-            // comboBox1
+            // CinsiyetCb
             // 
-            comboBox1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            comboBox1.ForeColor = Color.Crimson;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Bay", "Bayan" });
-            comboBox1.Location = new Point(75, 249);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(200, 29);
-            comboBox1.TabIndex = 34;
+            CinsiyetCb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            CinsiyetCb.ForeColor = Color.Crimson;
+            CinsiyetCb.FormattingEnabled = true;
+            CinsiyetCb.Items.AddRange(new object[] { "Bay", "Bayan" });
+            CinsiyetCb.Location = new Point(75, 249);
+            CinsiyetCb.Name = "CinsiyetCb";
+            CinsiyetCb.Size = new Size(200, 29);
+            CinsiyetCb.TabIndex = 34;
             // 
             // label7
             // 
@@ -157,14 +161,14 @@
             label6.TabIndex = 33;
             label6.Text = "Aylık Tutar";
             // 
-            // textBox5
+            // YasTb
             // 
-            textBox5.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox5.ForeColor = Color.Crimson;
-            textBox5.Location = new Point(75, 316);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 27);
-            textBox5.TabIndex = 30;
+            YasTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            YasTb.ForeColor = Color.Crimson;
+            YasTb.Location = new Point(75, 316);
+            YasTb.Name = "YasTb";
+            YasTb.Size = new Size(200, 27);
+            YasTb.TabIndex = 30;
             // 
             // label9
             // 
@@ -178,14 +182,14 @@
             label9.TabIndex = 28;
             label9.Text = "Seans";
             // 
-            // textBox3
+            // OdemeTb
             // 
-            textBox3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox3.ForeColor = Color.Crimson;
-            textBox3.Location = new Point(75, 381);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 27);
-            textBox3.TabIndex = 31;
+            OdemeTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            OdemeTb.ForeColor = Color.Crimson;
+            OdemeTb.Location = new Point(75, 381);
+            OdemeTb.Name = "OdemeTb";
+            OdemeTb.Size = new Size(200, 27);
+            OdemeTb.TabIndex = 31;
             // 
             // label8
             // 
@@ -199,14 +203,14 @@
             label8.TabIndex = 27;
             label8.Text = "Cinsiyet";
             // 
-            // textBox4
+            // TelefonTb
             // 
-            textBox4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox4.ForeColor = Color.Crimson;
-            textBox4.Location = new Point(75, 184);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 27);
-            textBox4.TabIndex = 29;
+            TelefonTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            TelefonTb.ForeColor = Color.Crimson;
+            TelefonTb.Location = new Point(75, 184);
+            TelefonTb.Name = "TelefonTb";
+            TelefonTb.Size = new Size(200, 27);
+            TelefonTb.TabIndex = 29;
             // 
             // label5
             // 
@@ -232,33 +236,34 @@
             label4.TabIndex = 25;
             label4.Text = "Üye Adı Soyadı";
             // 
-            // textBox2
+            // AdSoyadTb
             // 
-            textBox2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox2.ForeColor = Color.Crimson;
-            textBox2.Location = new Point(75, 119);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 27);
-            textBox2.TabIndex = 24;
+            AdSoyadTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            AdSoyadTb.ForeColor = Color.Crimson;
+            AdSoyadTb.Location = new Point(75, 119);
+            AdSoyadTb.Name = "AdSoyadTb";
+            AdSoyadTb.Size = new Size(200, 27);
+            AdSoyadTb.TabIndex = 24;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.ForeColor = Color.Crimson;
-            label3.Location = new Point(1009, 9);
+            label3.Location = new Point(999, 9);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
             label3.Size = new Size(28, 28);
             label3.TabIndex = 23;
             label3.Text = "X";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(621, 84);
+            label2.Location = new Point(587, 84);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
             label2.Size = new Size(194, 21);
@@ -277,55 +282,6 @@
             label1.TabIndex = 21;
             label1.Text = "FITNESS CENTER";
             // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(441, 114);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(562, 371);
-            guna2DataGridView1.TabIndex = 40;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -338,29 +294,80 @@
             label10.TabIndex = 22;
             label10.Text = "Üye Güncelleme ve Silme";
             // 
+            // UyeDGV
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            UyeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            UyeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            UyeDGV.ColumnHeadersHeight = 30;
+            UyeDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            UyeDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            UyeDGV.GridColor = Color.FromArgb(231, 229, 255);
+            UyeDGV.Location = new Point(296, 119);
+            UyeDGV.Name = "UyeDGV";
+            UyeDGV.RowHeadersVisible = false;
+            UyeDGV.Size = new Size(719, 356);
+            UyeDGV.TabIndex = 42;
+            UyeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            UyeDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            UyeDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            UyeDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            UyeDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            UyeDGV.ThemeStyle.BackColor = Color.White;
+            UyeDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            UyeDGV.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            UyeDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            UyeDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            UyeDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            UyeDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            UyeDGV.ThemeStyle.HeaderStyle.Height = 30;
+            UyeDGV.ThemeStyle.ReadOnly = false;
+            UyeDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
+            UyeDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            UyeDGV.ThemeStyle.RowsStyle.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            UyeDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            UyeDGV.ThemeStyle.RowsStyle.Height = 25;
+            UyeDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.Crimson;
+            UyeDGV.ThemeStyle.RowsStyle.SelectionForeColor = Color.White;
+            UyeDGV.CellContentClick += UyeDGV_CellContentClick;
+            // 
             // GuncelleSil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1039, 581);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(UyeDGV);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(ZamanlamaCb);
+            Controls.Add(CinsiyetCb);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(YasTb);
             Controls.Add(label9);
-            Controls.Add(textBox3);
+            Controls.Add(OdemeTb);
             Controls.Add(label8);
-            Controls.Add(textBox4);
+            Controls.Add(TelefonTb);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(AdSoyadTb);
             Controls.Add(label3);
             Controls.Add(label10);
             Controls.Add(label2);
@@ -371,7 +378,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "GuncelleSil";
             Load += GuncelleSil_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)UyeDGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -382,22 +389,22 @@
         private Button button6;
         private Button button5;
         private Button button1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox ZamanlamaCb;
+        private ComboBox CinsiyetCb;
         private Label label7;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox YasTb;
         private Label label9;
-        private TextBox textBox3;
+        private TextBox OdemeTb;
         private Label label8;
-        private TextBox textBox4;
+        private TextBox TelefonTb;
         private Label label5;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox AdSoyadTb;
         private Label label3;
         private Label label2;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Label label10;
+        private Guna.UI2.WinForms.Guna2DataGridView UyeDGV;
     }
 }

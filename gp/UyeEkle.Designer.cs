@@ -31,18 +31,18 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            AdSoyadTb = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            textBox4 = new TextBox();
+            TelefonTb = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
+            OdemeTb = new TextBox();
+            YasTb = new TextBox();
             label7 = new Label();
             label8 = new Label();
-            comboBox1 = new ComboBox();
+            CinsiyetCb = new ComboBox();
             label9 = new Label();
-            comboBox2 = new ComboBox();
+            ZamanlamaCb = new ComboBox();
             button1 = new Button();
             button5 = new Button();
             button6 = new Button();
@@ -54,7 +54,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(362, 9);
+            label1.Location = new Point(347, 9);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(187, 28);
@@ -66,7 +66,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 162);
             label2.ForeColor = Color.Crimson;
-            label2.Location = new Point(362, 52);
+            label2.Location = new Point(362, 50);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
             label2.Size = new Size(172, 30);
@@ -84,15 +84,16 @@
             label3.Size = new Size(28, 28);
             label3.TabIndex = 4;
             label3.Text = "X";
+            label3.Click += label3_Click;
             // 
-            // textBox2
+            // AdSoyadTb
             // 
-            textBox2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox2.ForeColor = Color.Crimson;
-            textBox2.Location = new Point(94, 161);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 27);
-            textBox2.TabIndex = 6;
+            AdSoyadTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            AdSoyadTb.ForeColor = Color.Crimson;
+            AdSoyadTb.Location = new Point(94, 161);
+            AdSoyadTb.Name = "AdSoyadTb";
+            AdSoyadTb.Size = new Size(200, 27);
+            AdSoyadTb.TabIndex = 6;
             // 
             // label4
             // 
@@ -118,14 +119,14 @@
             label5.TabIndex = 9;
             label5.Text = "Telefon Numarası";
             // 
-            // textBox4
+            // TelefonTb
             // 
-            textBox4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox4.ForeColor = Color.Crimson;
-            textBox4.Location = new Point(362, 161);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 27);
-            textBox4.TabIndex = 10;
+            TelefonTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            TelefonTb.ForeColor = Color.Crimson;
+            TelefonTb.Location = new Point(362, 161);
+            TelefonTb.Name = "TelefonTb";
+            TelefonTb.Size = new Size(200, 27);
+            TelefonTb.TabIndex = 10;
             // 
             // label6
             // 
@@ -139,23 +140,23 @@
             label6.TabIndex = 12;
             label6.Text = "Aylık Tutar";
             // 
-            // textBox3
+            // OdemeTb
             // 
-            textBox3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox3.ForeColor = Color.Crimson;
-            textBox3.Location = new Point(362, 310);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 27);
-            textBox3.TabIndex = 11;
+            OdemeTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            OdemeTb.ForeColor = Color.Crimson;
+            OdemeTb.Location = new Point(362, 310);
+            OdemeTb.Name = "OdemeTb";
+            OdemeTb.Size = new Size(200, 27);
+            OdemeTb.TabIndex = 11;
             // 
-            // textBox5
+            // YasTb
             // 
-            textBox5.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox5.ForeColor = Color.Crimson;
-            textBox5.Location = new Point(623, 161);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 27);
-            textBox5.TabIndex = 11;
+            YasTb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            YasTb.ForeColor = Color.Crimson;
+            YasTb.Location = new Point(623, 161);
+            YasTb.Name = "YasTb";
+            YasTb.Size = new Size(200, 27);
+            YasTb.TabIndex = 11;
             // 
             // label7
             // 
@@ -181,17 +182,17 @@
             label8.TabIndex = 9;
             label8.Text = "Cinsiyet";
             // 
-            // comboBox1
+            // CinsiyetCb
             // 
-            comboBox1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            comboBox1.ForeColor = Color.Crimson;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Bay", "Bayan" });
-            comboBox1.Location = new Point(94, 310);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(200, 29);
-            comboBox1.TabIndex = 13;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            CinsiyetCb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            CinsiyetCb.ForeColor = Color.Crimson;
+            CinsiyetCb.FormattingEnabled = true;
+            CinsiyetCb.Items.AddRange(new object[] { "Bay", "Bayan" });
+            CinsiyetCb.Location = new Point(94, 310);
+            CinsiyetCb.Name = "CinsiyetCb";
+            CinsiyetCb.Size = new Size(200, 29);
+            CinsiyetCb.TabIndex = 13;
+            CinsiyetCb.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label9
             // 
@@ -205,17 +206,17 @@
             label9.TabIndex = 9;
             label9.Text = "Seans";
             // 
-            // comboBox2
+            // ZamanlamaCb
             // 
-            comboBox2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            comboBox2.ForeColor = Color.Crimson;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "06.00-08.00", "08.00-10.00", "18.00-20.00", "20.00-22.00" });
-            comboBox2.Location = new Point(623, 308);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(200, 29);
-            comboBox2.TabIndex = 13;
-            comboBox2.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            ZamanlamaCb.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            ZamanlamaCb.ForeColor = Color.Crimson;
+            ZamanlamaCb.FormattingEnabled = true;
+            ZamanlamaCb.Items.AddRange(new object[] { "06.00-08.00", "08.00-10.00", "18.00-20.00", "20.00-22.00" });
+            ZamanlamaCb.Location = new Point(623, 308);
+            ZamanlamaCb.Name = "ZamanlamaCb";
+            ZamanlamaCb.Size = new Size(200, 29);
+            ZamanlamaCb.TabIndex = 13;
+            ZamanlamaCb.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -230,6 +231,7 @@
             button1.TabIndex = 14;
             button1.Text = "Ekle";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button5
             // 
@@ -237,13 +239,14 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(377, 461);
+            button5.Location = new Point(375, 455);
             button5.Margin = new Padding(5, 4, 5, 4);
             button5.Name = "button5";
             button5.Size = new Size(174, 55);
             button5.TabIndex = 18;
-            button5.Text = "Geri";
+            button5.Text = "Çıkış";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -258,6 +261,7 @@
             button6.TabIndex = 19;
             button6.Text = "Geri";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -272,29 +276,30 @@
             button7.TabIndex = 20;
             button7.Text = "Reset";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // UyeEkle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(892, 591);
+            ClientSize = new Size(873, 591);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(ZamanlamaCb);
+            Controls.Add(CinsiyetCb);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(YasTb);
             Controls.Add(label9);
-            Controls.Add(textBox3);
+            Controls.Add(OdemeTb);
             Controls.Add(label8);
-            Controls.Add(textBox4);
+            Controls.Add(TelefonTb);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(AdSoyadTb);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -302,6 +307,7 @@
             Name = "UyeEkle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Reset";
+            Load += UyeEkle_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,18 +317,18 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox AdSoyadTb;
         private Label label4;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox TelefonTb;
         private Label label6;
-        private TextBox textBox3;
-        private TextBox textBox5;
+        private TextBox OdemeTb;
+        private TextBox YasTb;
         private Label label7;
         private Label label8;
-        private ComboBox comboBox1;
+        private ComboBox CinsiyetCb;
         private Label label9;
-        private ComboBox comboBox2;
+        private ComboBox ZamanlamaCb;
         private Button button1;
         private Button button5;
         private Button button6;

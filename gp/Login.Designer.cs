@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label1 = new Label();
-            textBox1 = new TextBox();
+            KullaniciTb = new TextBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            textBox2 = new TextBox();
+            SifreTb = new TextBox();
             button1 = new Button();
             button2 = new Button();
             pictureBox3 = new PictureBox();
@@ -55,16 +55,16 @@
             label1.Text = "FITNESS CENTER";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // KullaniciTb
             // 
-            textBox1.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox1.ForeColor = Color.Crimson;
-            textBox1.Location = new Point(442, 136);
-            textBox1.Margin = new Padding(5, 4, 5, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(455, 74);
-            textBox1.TabIndex = 2;
+            KullaniciTb.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            KullaniciTb.ForeColor = Color.Crimson;
+            KullaniciTb.Location = new Point(442, 136);
+            KullaniciTb.Margin = new Padding(5, 4, 5, 4);
+            KullaniciTb.Multiline = true;
+            KullaniciTb.Name = "KullaniciTb";
+            KullaniciTb.Size = new Size(455, 74);
+            KullaniciTb.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -89,16 +89,17 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // textBox2
+            // SifreTb
             // 
-            textBox2.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox2.ForeColor = Color.Crimson;
-            textBox2.Location = new Point(442, 241);
-            textBox2.Margin = new Padding(5, 4, 5, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(455, 74);
-            textBox2.TabIndex = 4;
+            SifreTb.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            SifreTb.ForeColor = Color.Crimson;
+            SifreTb.Location = new Point(442, 241);
+            SifreTb.Margin = new Padding(5, 4, 5, 4);
+            SifreTb.Multiline = true;
+            SifreTb.Name = "SifreTb";
+            SifreTb.PasswordChar = '*';
+            SifreTb.Size = new Size(455, 74);
+            SifreTb.TabIndex = 4;
             // 
             // button1
             // 
@@ -113,6 +114,7 @@
             button1.TabIndex = 6;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -127,6 +129,7 @@
             button2.TabIndex = 7;
             button2.Text = "Reset";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox3
             // 
@@ -148,9 +151,9 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox2);
-            Controls.Add(textBox2);
+            Controls.Add(SifreTb);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox1);
+            Controls.Add(KullaniciTb);
             Controls.Add(label1);
             Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
             FormBorderStyle = FormBorderStyle.None;
@@ -166,12 +169,14 @@
 
         #endregion
         private Label label1;
-        private TextBox textBox1;
+        
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private TextBox textBox2;
+        
         private Button button1;
         private Button button2;
         private PictureBox pictureBox3;
+        private TextBox KullaniciTb;
+        private TextBox SifreTb;
     }
 }
